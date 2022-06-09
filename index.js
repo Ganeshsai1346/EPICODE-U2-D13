@@ -24,6 +24,7 @@ const displayBooks = async () => {
                                         type="button"
                                         id="cartButton"
                                         class="btn btn-outline-secondary"
+                                        onclick="addToCart(event)"
                                     >
                                         Add to Cart
                                     </button>
@@ -52,13 +53,7 @@ const removeCard = (e) => {
 //4. When this button is pressed: 1) add the item to another list (the cart), and 2) change the card styling to show that the element is in the cart (eg. red border, a badge, an icon… you choose)
 
 const addToCart = (e) => {
-  let cards = document.querySelectorAll(".col-md-3");
+  let cardBook = e.target.closest(".card");
 
-  for (let i = 0; i < cards.length; i++) {
-    cards[i].onclick = (e) => {
-      e.target.classList.add("addBorder");
-    };
-  }
+  cardBook.classList.add("addBorder");
 };
-const btn = document.querySelector("#cartButton");
-btn.addEventListener("click", addToCart);
