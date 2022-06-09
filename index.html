@@ -16,34 +16,29 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <main role="main">
-        <section class="jumbotron text-center">
-          <div class="container">
-            <h1 class="jumbotron-heading">Strive Book Shop example</h1>
-            <p class="lead text-muted">
-              This page will dynamically load books from the web, and display
-              them in a cool way!
-            </p>
-            <div class="input-group mb-3">
-              <input
-                type="text"
-                class="form-control"
-                placeholder="Enter the book name"
-                aria-label="Recipient's username"
-                aria-describedby="button-addon2"
-              />
-              <div class="input-group-append">
-                <button
-                  class="btn btn-outline-secondary"
-                  type="button"
-                  id="button-addon2"
-                >
-                  Search
-                </button>
-              </div>
-            </div>
+    <main id="mainPage">
+      <section class="jumbotron text-center text-dark bg-success">
+        <div class="container">
+          <h1 class="jumbotron-heading">Strive Book Shop example</h1>
+          <p class="lead text-muted">
+            This page will dynamically load books from the web, and display them
+            in a cool way!
+          </p>
+          <div class="input-group mb-3">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Enter the book name"
+              aria-label="Recipient's username"
+              aria-describedby="button-addon2"
+            />
           </div>
-        </section>
+        </div>
+      </section>
+      <div class="container booksDisplay">
+        <div class="row"></div>
+      </div>
+    </main>
     <script
       src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
       integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"

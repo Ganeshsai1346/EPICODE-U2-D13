@@ -1,0 +1,27 @@
+/** @format */
+#mainPage {
+  width: 100%;
+  min-height: 100vh;
+  padding-bottom: 150px;
+  background: rgb(37, 70, 110);
+  background: linear-gradient(148deg, rgb(66, 9, 181) 0%, rgb(7, 23, 48) 100%);
+}
+.single-album {
+  margin-bottom: 1rem;
+}
+img {
+  width: 150px;
+  height: 220px;
+  object-fit: cover;
+}
+.single-album h5 {
+  font-weight: 500;
+  width: 100%;
+  margin-top: 5px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.addBorder {
+  border: 10px solid red;
+}
