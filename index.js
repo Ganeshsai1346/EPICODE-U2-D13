@@ -2,14 +2,17 @@
 //1 & //2
 const grid = document.querySelector(".container > .row");
 const displayBooks = async () => {
-  const response = await fetch("https://striveschool-api.herokuapp.com/books");
-  const books = await response.json();
+  try {
+    const response = await fetch(
+      "https://striveschool-api.herokuapp.com/books"
+    );
+    const books = await response.json();
 
-  books.forEach((book) => {
-    const col = document.createElement("div");
-    col.className = "col-md-3";
+    books.forEach((book) => {
+      const col = document.createElement("div");
+      col.className = "col-md-3";
 
-    col.innerHTML = `<div class="single-album card mb-4 shadow-sm">
+      col.innerHTML = `<div class="single-album card mb-4 shadow-sm">
                         <img src= ${book.img} class="card-img-top" alt="${book.title}">
                         <div class="card-body">
                             <h5 class="card-title">${book.title}<h5>
@@ -39,11 +42,17 @@ const displayBooks = async () => {
                             </div>
                         </div>
                     </div>`;
-    grid.appendChild(col);
-  });
+      grid.appendChild(col);
+    });
+    console.log("ganesh");
+  } catch (error) {
+    console.log(error);
+  }
 };
 
-displayBooks();
+window.onload = () => {
+  displayBooks();
+};
 
 //5.
 const removeCard = (e) => {
@@ -52,8 +61,4 @@ const removeCard = (e) => {
 
 //4. When this button is pressed: 1) add the item to another list (the cart), and 2) change the card styling to show that the element is in the cart (eg. red border, a badge, an icon… you choose)
 
-const addToCart = (e) => {
-  let cardBook = e.target.closest(".card");
-
-  cardBook.classList.add("addBorder");
-};
+const addToCart = (e) => {};
